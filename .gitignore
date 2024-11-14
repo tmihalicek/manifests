@@ -1,2 +1,2 @@
-cilium/*
-!cilium/cilium.yaml
+network/cilium/*
+!network/cilium/cilium.yaml
