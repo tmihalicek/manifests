@@ -11,3 +11,10 @@ helm template \
     --set cgroup.hostRoot=/sys/fs/cgroup \
     --set k8sServiceHost=localhost \
     --set k8sServicePort=7445 > cilium.yaml
+
+helm template \
+    cilium \
+    cilium/cilium \
+    --version 1.16.3 \
+    --namespace kube-system \
+    -f values.yaml > cilium.yaml
