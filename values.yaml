@@ -1,8 +1,6 @@
 kubeProxyReplacement: true
-
 k8sServiceHost: localhost
 k8sServicePort: 7445
-
 securityContext:
   capabilities:
     ciliumAgent:
@@ -21,15 +19,12 @@ securityContext:
       - NET_ADMIN
       - SYS_ADMIN
       - SYS_RESOURCE
-
 cgroup:
   autoMount:
     enabled: false
   hostRoot: /sys/fs/cgroup
-
 ipam:
   mode: kubernetes
-
 operator:
   rollOutPods: true
   resources:
@@ -39,7 +34,6 @@ operator:
     requests:
       cpu: 50m
       memory: 128Mi
-
 rollOutCiliumPods: true
 resources:
   limits:
@@ -48,23 +42,17 @@ resources:
   requests:
     cpu: 200m
     memory: 512Mi
-
 k8sClientRateLimit:
   qps: 20
   burst: 100
-
 l2announcements:
   enabled: true
-
 externalIPs:
   enabled: true
-
 loadBalancer:
   algorithm: maglev
-  
 gatewayAPI:
   enabled: true
-
 envoy:
   securityContext:
     capabilities:
@@ -73,7 +61,6 @@ envoy:
         - NET_ADMIN
         - PERFMON
         - BPF
-
 hubble:
   enabled: true
   relay:
