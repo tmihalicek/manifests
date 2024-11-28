@@ -1,7 +1,7 @@
 helm template \
     cilium \
     cilium/cilium \
-    --version 1.16.3 \
+    --version 1.16.4 \
     --namespace kube-system \
     --set ipam.mode=kubernetes \
     --set kubeProxyReplacement=true \
