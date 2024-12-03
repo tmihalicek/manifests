@@ -15,6 +15,6 @@ helm template \
 helm template \
     cilium \
     cilium/cilium \
-    --version 1.16.3 \
+    --version 1.16.4 \
     --namespace kube-system \
     -f values.yaml > cilium.yaml
