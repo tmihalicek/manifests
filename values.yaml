@@ -51,6 +51,7 @@ externalIPs:
   enabled: true
 loadBalancer:
   algorithm: maglev
+  mode: dsr
 gatewayAPI:
   enabled: true
 envoy:
