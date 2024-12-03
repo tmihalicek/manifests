@@ -35,6 +35,10 @@ operator:
       cpu: 50m
       memory: 128Mi
 rollOutCiliumPods: true
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 1
 resources:
   limits:
     cpu: 1000m
@@ -53,14 +57,14 @@ loadBalancer:
   algorithm: maglev
 gatewayAPI:
   enabled: true
-#envoy:
-#  securityContext:
-#    capabilities:
-#      keepCapNetBindService: true
-#      envoy:
-#        - NET_ADMIN
-#        - PERFMON
-#        - BPF
+envoy:
+  securityContext:
+    capabilities:
+      keepCapNetBindService: true
+      envoy:
+        - NET_ADMIN
+        - PERFMON
+        - BPF
 hubble:
   enabled: true
   relay:
