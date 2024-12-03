@@ -54,14 +54,14 @@ loadBalancer:
   mode: dsr
 gatewayAPI:
   enabled: true
-envoy:
-  securityContext:
-    capabilities:
-      keepCapNetBindService: true
-      envoy:
-        - NET_ADMIN
-        - PERFMON
-        - BPF
+#envoy:
+#  securityContext:
+#    capabilities:
+#      keepCapNetBindService: true
+#      envoy:
+#        - NET_ADMIN
+#        - PERFMON
+#        - BPF
 hubble:
   enabled: true
   relay:
